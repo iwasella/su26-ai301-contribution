@@ -1,15 +1,16 @@
 # Contribution [#]: [Issue Title]
 
 **Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Student:** [Ella]  
+**Issue:** [https://github.com/wesnoth/wesnoth/issues/1559]  
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
+I enjoy working with video games, and I also have an interest in volume/audio. This issue was under an open-source video game, and it was also labeled as an audio issue. Moreover, it was also labeled a "Good First Issue." They have labels like that for anyone new to contributing, and I believed it to be an active community with a Discord too.
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I hope to learn how to contribute to open-source games.
 
 ---
 
