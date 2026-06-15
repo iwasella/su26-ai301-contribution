@@ -18,39 +18,37 @@ I hope to learn how to contribute to open-source games.
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+I'm supposed to create a feature that allows for songs to be specified at different level. 
 
 ### Expected Behavior
 
-[What should happen?]
+The feature should work the same way as the volume tag does in the game.
 
 ### Current Behavior
 
-[What actually happens?]
+Developers of campaign creators aren't able to add a volume attribute.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
-
+The src/sound/ part of the codebase is involved.
 ---
 
 ## Reproduction Process
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+I faced a challenge in which I had trouble running because the buld was missing a .nib file which allowed the game to be called and run, but I made that into another github issue.
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Build from the command line with CMake:
+2. Run the resulting binary from Terminal:
+3. The process was hanging, so I added a MacOS launcher for the build to make it run.
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+- **Branch showing reproduction:** https://github.com/iwasella/wesnoth/tree/feature/1559-music-volume-attribute
+- **My findings:** There isn't a MacOS launcher for the build. 
 
 ---
 
@@ -58,30 +56,28 @@ I hope to learn how to contribute to open-source games.
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+There isn't really an issue, but I hope to add a new attribute.
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+I plan on going into the src/sound of the repo and looking into how they create attributes specifically for the music tag in the game. Then, I pla on adding the volume attribute.
 
 ### Implementation Plan
 
-Using UMPIRE framework (adapted):
+**Understand:** Add a volume attribute to the game
 
-**Understand:** [Restate the problem]
+**Match:** There are existing attributes under the music tag in which I can see how.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
-
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:** 
+1. Modify the sound file.
+2. Add the volume attribute to controle the sound level.
+3. Run the build
 
 **Implement:** [Link to your branch/commits as you work]
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** 
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** See if creators can modify the song volumes by running the game and running it on my own.
 
 ---
 
