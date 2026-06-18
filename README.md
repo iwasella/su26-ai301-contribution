@@ -41,7 +41,7 @@ I faced a challenge in which I had trouble running because the buld was missing 
 
 ### Steps to Reproduce
 
-1. Build from the command line with CMake:
+1. Build from the command line with CMake.
 2. Run the resulting binary from Terminal:
 3. The process was hanging, so I added a MacOS launcher for the build to make it run.
 
@@ -64,16 +64,16 @@ I plan on going into the src/sound of the repo and looking into how they create 
 
 ### Implementation Plan
 
-**Understand:** Add a volume attribute to the game
+**Understand:** Adding the volume attribute to the music track involves understanding that the Wesnoth Markup Language.
 
-**Match:** There are existing attributes under the music tag in which I can see how.
+**Match:** There are existing attributes under the music tag in which I can see how to better implement
 
 **Plan:** 
-1. Modify the sound file.
+1. Modify the files that work in relation to the sound.
 2. Add the volume attribute to controle the sound level.
-3. Run the build
+3. Run the build everytime I make a change to see how it works.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [Branch which adds volume attribute](https://github.com/iwasella/wesnoth/tree/feature/1559-music-volume-attribute)
 
 **Review:** 
 
@@ -85,50 +85,46 @@ I plan on going into the src/sound of the repo and looking into how they create 
 
 ### Unit Tests
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+- [X] Test case 1: Worked on a single track which happened to be on the titlescreen and initialized the volume attribute to see that it really does scale down.
+- [X] Test case 2: Making sure that the volume is being scaled in relation with the preference music slider
 
-### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
 
 ### Manual Testing
 
-[What you tested manually and results]
+- Playing the test track with the game titlescreen and actively using the music preference slider
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week [2] Progress
 
-[What you built this week, challenges faced, decisions made]
+I worked on reading the docs on the Wesnoth website, and I built up adding the volume attribute to the files. My biggest challenge figuring out which files I was suppoed to look at in the codebase. I decided to look into src/sound. I made a PR and got feedback.
 
-### Week [Y] Progress
+### Week [3] Progress
 
-[Continue documenting as you work]
+With help from others, I reworked on my branch, making sure that nothing is overwritten in regards to the preference slider.
 
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** Mainly sound.cpp and sound_music_track.cpp
+- **Key commits:** [When I first added the volum attribute](https://github.com/wesnoth/wesnoth/commit/fd670b927f4291e51f2724bba093619276e20a37) <br>
+[Fixing bugs with the volume attribute](https://github.com/wesnoth/wesnoth/commit/a1c81c52935c6dcb3f540a4d10eed973db1bba09)
+- **Approach decisions:** I worked a lot on the titlescreen because it was easier for me to load that scenario.
 
 ---
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** https://github.com/wesnoth/wesnoth/pull/11291
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** [I added the Volume Attribute]
 
 **Maintainer Feedback:**
-- [Date]: [Summary of feedback received]
-- [Date]: [How you addressed it]
+- [June 15th]: Track specific volume is overwritten using slider. Check the '''set_music_volume'''.
+- [June 15th]: Worked on making sure the slider works in relation with the track volume.
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** [Awaiting review]
 
 ---
 
@@ -136,20 +132,13 @@ I plan on going into the src/sound of the repo and looking into how they create 
 
 ### Technical Skills Gained
 
-[What you learned technically]
+I got more experience with learning a new codebase and how audio in c++ can be handled.
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+I was not used to interacting with a new community to open-source, but I joined the Discord Server and also maintain active comms in regards to PR feedback.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+I'd fork and run a build to see where the bug is before I dive into a PR
 
----
-
-## Resources Used
-
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
