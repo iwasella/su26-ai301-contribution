@@ -1,9 +1,9 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#1]: [Adding the feature to adjust volume to music tracks in a video game]
 
-**Contribution Number:** [1 / 2 / 3]  
+**Contribution Number:** [1]  
 **Student:** [Ella]  
 **Issue:** [https://github.com/wesnoth/wesnoth/issues/1559]  
-**Status:** [Phase I] [Complete]
+**Status:** [Phase III] [Complete]
 
 ---
 
