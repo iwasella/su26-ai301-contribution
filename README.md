@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** [Ella]  
 **Issue:** [https://github.com/wesnoth/wesnoth/issues/1559]  
-**Status:** [Phase III] [Complete]
+**Status:** [Phase IV] [Complete]
 
 ---
 
