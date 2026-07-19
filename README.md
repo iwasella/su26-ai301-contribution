@@ -123,6 +123,7 @@ With help from others, I reworked on my branch, making sure that nothing is over
 **Maintainer Feedback:**
 - [June 15th]: Track specific volume is overwritten using slider. Check the '''set_music_volume'''.
 - [June 15th]: Worked on making sure the slider works in relation with the track volume.
+- [Month of July]: Rework on clamping the audio.
 
 **Status:** [Awaiting review]
 
