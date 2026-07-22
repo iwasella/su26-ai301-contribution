@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** [Ella]  
 **Issue:** [https://github.com/wesnoth/wesnoth/issues/1559]  
-**Status:** [Phase IV] [Complete]
+**Status:** [Phase II
 
 ---
 
@@ -30,20 +30,22 @@ Developers of campaign creators aren't able to add a volume attribute.
 
 ### Affected Components
 
-The src/sound/ part of the codebase is involved.
+The src/sound/ part of the codebase is involved. I worked on adding to the core schema file. I also worked specifcially on the scound.cpp file, editing the set_music_volume() function. Another file I worked on was the sound_music_track.cpp.
 ---
 
 ## Reproduction Process
 
 ### Environment Setup
 
-I faced a challenge in which I had trouble running because the buld was missing a .nib file which allowed the game to be called and run, but I made that into another github issue.
+I faced a challenge in which I had trouble running because the buld was missing a .nib file which allowed the game to be called and run, but I made that into another github issue. 
 
 ### Steps to Reproduce
 
 1. Build from the command line with CMake.
 2. Run the resulting binary from Terminal:
 3. The process was hanging, so I added a MacOS launcher for the build to make it run.
+4. Once the build is running, I am able to see the running of Wesnoth main menu screen.
+5. To play around now with the sound, it would be good to go to the setting and see the audio sliders.
 
 ### Reproduction Evidence
 
@@ -56,28 +58,29 @@ I faced a challenge in which I had trouble running because the buld was missing 
 
 ### Analysis
 
-There isn't really an issue, but I hope to add a new attribute.
+My goal would be adding the new volume attribute to the game Wesnoth so that people that are making campagin scenarios in the game can control the level of audio tracks they may have in the game.
 
 ### Proposed Solution
 
-I plan on going into the src/sound of the repo and looking into how they create attributes specifically for the music tag in the game. Then, I pla on adding the volume attribute.
+I plan on going into the src/sound and editing the functions that are in charge of playing and setting audio levels, and there I plan on adding additional checks with the volume attribute to go on top of existing audio level adjustments. 
 
 ### Implementation Plan
 
-**Understand:** Adding the volume attribute to the music track involves understanding that the Wesnoth Markup Language.
+**Understand:** Adding the volume attribute to the music track involves understanding that the Wesnoth Markup Language and also having a good underestanding of the set_music_volume() function.
 
-**Match:** There are existing attributes under the music tag in which I can see how to better implement
+**Match:** There are existing attributes under the music tag in which I can see how to better implement an attribute, and also I can see what is going on in the existing volumen functions in the fame to see the math for how they adjust volume beforehand.
 
 **Plan:** 
 1. Modify the files that work in relation to the sound.
 2. Add the volume attribute to controle the sound level.
-3. Run the build everytime I make a change to see how it works.
+3. Include a test case on the main menu screen, so that I can instantly see how the volume is changed.
+4. Run the build everytime I make a change to see how it works.
 
 **Implement:** [Branch which adds volume attribute](https://github.com/iwasella/wesnoth/tree/feature/1559-music-volume-attribute)
 
 **Review:** 
 
-**Evaluate:** See if creators can modify the song volumes by running the game and running it on my own.
+**Evaluate:** Work with maintainers to make sure my code fits in with Wesnoth codebase standards, and also so that my code passes any bugs that they may find.
 
 ---
 
