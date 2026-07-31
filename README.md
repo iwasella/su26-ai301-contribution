@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** [Ella]  
 **Issue:** [https://github.com/wesnoth/wesnoth/issues/1559]  
-**Status:** [Phase II
+**Status:** [Phase III]
 
 ---
 
@@ -39,6 +39,8 @@ The src/sound/ part of the codebase is involved. I worked on adding to the core 
 
 I faced a challenge in which I had trouble running because the buld was missing a .nib file which allowed the game to be called and run, but I made that into another github issue. 
 
+The environment setup involved downloading and creating a build of Wesnoth. I used VS code to create the build, and I ran it in the terminal. Thus, it allowed the game to launch, and I could debug and work on it. 
+
 ### Steps to Reproduce
 
 1. Build from the command line with CMake.
@@ -72,9 +74,9 @@ I plan on going into the src/sound and editing the functions that are in charge 
 
 **Plan:** 
 1. Modify the files that work in relation to the sound.
-2. Add the volume attribute to controle the sound level.
+2. Add the volume attribute to control the sound level.
 3. Include a test case on the main menu screen, so that I can instantly see how the volume is changed.
-4. Run the build everytime I make a change to see how it works.
+4. Run the build evertime I make a change to see how it works.
 
 **Implement:** [Branch which adds volume attribute](https://github.com/iwasella/wesnoth/tree/feature/1559-music-volume-attribute)
 
